@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>logIn</title>
 </head>
+
 <body>
-<?php require_once "nav.php";?>
-    
-
-
-<main class="container mt-3 ">
-
-<form method="POST">
-<LAbel class="font-weight-blod">Email</LAbel>
-<input class="form-control" type="email" name="email" required/>
-<label class="font-weight-blod" >Bassword</label>
-<input  class="form-control" type="password" name="bassword" required/>
-
-<button class="btn btn-info  mt-3" type="submit" name="login">Sign In </button>
-<a class="btn btn-dark  mt-3" href="register.php">Sign UP </a>
-
-<br>
-<a href="reset.php">نست كلمه المرور </a>
+    <?php require_once "nav.php";?>
 
 
 
-</form>
-<?php
+    <main class="container mt-3 ">
+
+        <form method="POST">
+            <LAbel class="font-weight-blod">Email</LAbel>
+            <input class="form-control" type="email" name="email" required />
+            <label class="font-weight-blod">Bassword</label>
+            <input class="form-control" type="password" name="bassword" required />
+
+            <button class="btn btn-info  mt-3" type="submit" name="login">Sign In </button>
+            <a class="btn btn-dark  mt-3" href="register.php">Sign UP </a>
+
+            <br>
+            <a href="reset.php">نست كلمه المرور </a>
+
+
+
+        </form>
+        <?php
  
 
  if(isset($_POST['login'])){
@@ -54,13 +56,13 @@ if($login->rowCount()===1){
 
         if($user->ROEL=== "USER"){// التحقق من نوع المستخدم
 
-            header("location:http://hussain22.eb2a.com//user/index.php",true);
+            header("location:http://new-worled.eb2a.com/user/index.php",true);
         }elseif($user->ROEL=== "ADMIN"){
 
-            header("location:http://hussain22.eb2a.com/admin/index.php",true);}
+            header("location:http://new-worled.eb2a.com/admin/index.php",true);}
             elseif($user->ROEL=== "SUBADMIN"){
 
-                header("location:http://hussain22.eb2a.com/subeAdmin/index.php",true);}
+                header("location:http://new-worled.eb2a.com/subeAdmin/index.php",true);}
 
 
 
@@ -97,7 +99,8 @@ echo '<div class="alert alert-info" role="alert">
 
 ?>
 
-</main>
+    </main>
 
 </body>
+
 </html>

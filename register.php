@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
 </head>
+
 <body>
-<?php require_once "nav.php";?>
-<div class="container">
-<form  method="POST">
-<div class="mb-3">
-<label class="form-label">Name<SPAn style="color:red">*</SPAn></label>
- <input  class="form-control" id="exampleInputEmail1"  type="text" name="Name" required/>
- 
-</div>
-<div class="mb-3">
-<label  class="form-label" required>Age <SPAn style="color:red">*</SPAn></label>
-  <input type="date" name="Age"/>
-  </div>
-  <div class="mb-3">
-<label for="exampleInputEmail1" class="form-label">Email <SPAn style="color:red">*</SPAn></label>
- <input  class="form-control" id="exampleInputEmail1"  type="email" name="Email"  required/>
- </div>
- <div class="mb-3">
- <label  class="form-label">Password<SPAn style="color:red">*</SPAn></label>
-<input  class="form-control"  type="password" name="Password" required />
-</div>
-<div class="mb-3">
-<button   class="btn btn-primary" type="submit" name="signUP" >signUP</button>
+    <?php require_once "nav.php";?>
+    <div class="container">
+        <form method="POST">
+            <div class="mb-3">
+                <label class="form-label">Name<SPAn style="color:red">*</SPAn></label>
+                <input class="form-control" id="exampleInputEmail1" type="text" name="Name" required />
 
-<a class="btn btn-dark  " href="login.php">Log In </a>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" required>Age <SPAn style="color:red">*</SPAn></label>
+                <input type="date" name="Age" />
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email <SPAn style="color:red">*</SPAn></label>
+                <input class="form-control" id="exampleInputEmail1" type="email" name="Email" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Password<SPAn style="color:red">*</SPAn></label>
+                <input class="form-control" type="password" name="Password" required />
+            </div>
+            <div class="mb-3">
+                <button class="btn btn-primary" type="submit" name="signUP">signUP</button>
 
-</div>
-</form>
-</div>
+                <a class="btn btn-dark  " href="login.php">Log In </a>
 
-<?php
+            </div>
+        </form>
+    </div>
+
+    <?php
 
 use PHPMailer\PHPMailer\SMTP;
 require_once 'datapass.php';
@@ -89,8 +91,8 @@ $mail->Subject = 'Confiarm Youer Mail';
 $mail->Body    = 
 '  يرجي تفعيل حسابك  اهلا وسهلا بك في عالمك الجديد'.
 '<div>رابط التحقق </div>'.
-'<a href="http://hussain22.eb2a.com/active.php?code='.$SECUERTY_COD.'">
-http://hussain22.eb2a.com/active.php?code='.$SECUERTY_COD.'
+'<a href="http://new-worled.eb2a.com/active.php?code='.$SECUERTY_COD.'">
+http://new-worled.eb2a.com/active.php?code='.$SECUERTY_COD.'
 
 </a>';
 
@@ -112,5 +114,5 @@ $mail->SMTPDebug = SMTP::DEBUG_SERVER;
 
 ?>
 </body>
-</html>
 
+</html>

@@ -1,34 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>Home</title>
 </head>
+
 <body>
-    
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-      <?php
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <?php
   echo  '<form >
      <button class="btn btn-outline-danger mt-3"  type="submit" name="logout">Sign Out</button>
  </form>'; ?>
-    <a class="navbar-brand" href="#">
-   
-      Hussain
-    </a>
-    <img src="../img/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="#">
 
-  </div>
-</nav>
+                Hussain
+            </a>
+            <img src="../img/logo.jpg" alt="" width="50" height="50" class="d-inline-block align-text-top">
 
-<main class="container mt-3 "  style="max-width: 720px;">
+        </div>
+    </nav>
 
-<?php
+    <main class="container mt-3 " style="max-width: 720px;">
+
+        <?php
 
 session_start();
 
@@ -150,18 +153,18 @@ if(isset($_GET['status'])){
 
 
 }else{
-    header("http://hussain22.eb2a.com/login.php",true); 
+    header("http://new-worled.eb2a.com/login.php",true); 
     die("");
 }
 }else{
-    header("http://hussain22.eb2a.com/login.php",true); 
+    header("http://new-worled.eb2a.com/login.php",true); 
     die(""); 
 }
 
 if(isset($_GET['logout'])){
     session_unset();
     session_destroy();
-    header("http://hussain22.eb2a.com/login.php",true); 
+    header("http://new-worled.eb2a.com/login.php",true); 
 }
 
 
@@ -171,8 +174,9 @@ if(isset($_GET['logout'])){
 
 ?>
 
-</main>
+    </main>
 
 
 </body>
+
 </html>

@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reset</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 </head>
+
 <body>
-<?php require_once "nav.php";?>
-<?php  require_once 'datapass.php'; ?>
+    <?php require_once "nav.php";?>
+    <?php  require_once 'datapass.php'; ?>
 
-<main class="contanier m-auto" style=" text-align:center; max-width :720px; margin-top:50px !important">
+    <main class="contanier m-auto" style=" text-align:center; max-width :720px; margin-top:50px !important">
 
 
-<?php
+        <?php
 if(isset($_GET['code'])){   
     // echo'<form method="post">
 
@@ -77,10 +80,10 @@ $mail->Body    =
 ' لتعيين كلمه المرور 
 <br>'.
 '<div>اضغط علي الرابط التالي</div>'.
-'<a href="http://hussain22.eb2a.com/reset.php?email='.$_POST['email'].'
+'<a href="http://new-worled.eb2a.com/reset.php?email='.$_POST['email'].'
 & code='.$user->SECUERTY_COD.'">
 
-http://hussain22.eb2a.com/reset.php?email='.$_POST['email'].'
+http://new-worled.eb2a.com/reset.php?email='.$_POST['email'].'
 & code='.$user->SECUERTY_COD.'"
 </a>';
 
@@ -104,7 +107,7 @@ echo '<div class="alert alert-danger mt-3">
 
 ?>
 
-<?php
+        <?php
 
 
 if(isset($_POST['pasupdat'])){
@@ -143,7 +146,8 @@ if($resetPassword->execute()){
 
 ?>
 
-</main>
+    </main>
 
 </body>
+
 </html>
