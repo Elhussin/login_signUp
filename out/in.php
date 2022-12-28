@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <title>OUT</title>
 </head>
+
 <body>
-<body style="background-color: #8080803d">
-<nav class="navbar navbar-light "  style="background-color:#837d7d">
-  <form class="container-fluid justify-content-center">
-  <a class="btn btn-warning mt-3 m-3 w-25"  href="search.php">البحث  </a>
- <a  class="btn btn-danger fw-bolder mt-3  m-3 w-25"  href="out.php">المصنع</a>
- <a class="btn btn-success mt-3 m-3 w-25"  href="done.php">تم التسليم  </a>
- <a class="btn btn-info mt-3 m-3 w-100"  href="in.php">الفرع</a>
-  </form>
-</nav>
-<main class="container mt-3 "  style=" max-width:80%; margin:outo;">
-<!--  SEND BOX  -->
-<nav class="navbar navbar-light bg-light">
-  <form class="container-fluid">
-    <div class="input-group">
-      <input class=" form-control " aria-describedby="basic-addon1" style="text-align: center;"  autofocus placeholder="استلام من المصنع" required type="number" name="nmuber" >
-      <button  class="input-group-text btn btn-outline-success " id="basic-addon1" type="submit" name="send"> استلام </button>
 
-    </div>
-  </form>
-</nav>
+    <body style="background-color: #8080803d">
+        <nav class="navbar navbar-light " style="background-color:#837d7d">
+            <form class="container-fluid justify-content-center">
+                <a class="btn btn-warning mt-3 m-3 w-25" href="search.php">البحث </a>
+                <a class="btn btn-danger fw-bolder mt-3  m-3 w-25" href="out.php">المصنع</a>
+                <a class="btn btn-success mt-3 m-3 w-25" href="done.php">تم التسليم </a>
+                <a class="btn btn-info mt-3 m-3 w-100" href="in.php">الفرع</a>
+            </form>
+        </nav>
+        <main class="container mt-3 " style=" max-width:80%; margin:outo;">
+            <!--  SEND BOX  -->
+            <nav class="navbar navbar-light bg-light">
+                <form class="container-fluid">
+                    <div class="input-group">
+                        <input class=" form-control " aria-describedby="basic-addon1" style="text-align: center;"
+                            autofocus placeholder="استلام من المصنع" required type="number" name="nmuber">
+                        <button class="input-group-text btn btn-outline-success " id="basic-addon1" type="submit"
+                            name="send"> استلام </button>
 
-<!-- search Box  -->
-<nav class="navbar navbar-light bg-light">
-<form class="container-fluid">
-    <div class="input-group">
-<input class=" form-control " aria-describedby="basic-addon1"  style="text-align: center;"  type="number" name="searchv" placeholder="البحث عن العناصر بالفرع "  >
-<button class="input-group-text btn btn-outline-success " id="basic-addon1" type="submit" name="search">البحث</button>
-</div>
-  </form>
-</nav>
+                    </div>
+                </form>
+            </nav>
+
+            <!-- search Box  -->
+            <nav class="navbar navbar-light bg-light">
+                <form class="container-fluid">
+                    <div class="input-group">
+                        <input class=" form-control " aria-describedby="basic-addon1" style="text-align: center;"
+                            type="number" name="searchv" placeholder="البحث عن العناصر بالفرع ">
+                        <button class="input-group-text btn btn-outline-success " id="basic-addon1" type="submit"
+                            name="search">البحث</button>
+                    </div>
+                </form>
+            </nav>
 
 
-<?php
+            <?php
 require_once '../datapass.php';
-header( "Refresh:30;url=http://localhost/out/in.php" ); 
+header( "Refresh:30;url=http://new-worled.eb2a.com/out/in.php" ); 
 
   $done = $databass->prepare('SELECT * FROM `shop` WHERE  `STATA`="IN SHOP"');
 $done->execute();
@@ -233,6 +241,7 @@ if(isset($_GET['add'])){
 
 
 ?>
-</main>
-</body>
+        </main>
+    </body>
+
 </html>
