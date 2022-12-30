@@ -55,18 +55,18 @@ if(isset($_SESSION['user'])){
  <a class="btn btn-outline-info  w-100  mt-3" href="search.php">Search</a>';    
     
     }else{
-        header("location:http://new-worled.eb2a.com/login.php",true);
+        header("location:http://new-worled.eb2a.com/out/login.php",true);
     
     }
 }else{
-    header("location:http://new-worled.eb2a.com/login.php",true);
+    header("location:http://new-worled.eb2a.com/out/login.php",true);
 
 }
 
 if(isset($_GET['logout'])){
     session_unset();// حذف الجلسه وتدمير البيانات
     session_destroy();
-    header("http://new-worled.eb2a.com/login.php",true);
+    header("location:http://new-worled.eb2a.com/out/login.php",true);
 
 }
 

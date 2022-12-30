@@ -144,13 +144,13 @@ if(isset($_POST['edit'])){
 
     session_unset();// حذف الجلسه وتدمير البيانات
     session_destroy();
-    header("location:http://new-worled.eb2a.com/login.php",true);
+    header("location:http://new-worled.eb2a.com/out/login.php",true);
 }
     }
 else{
     session_unset();// حذف الجلسه وتدمير البيانات
     session_destroy();
-    header("location:http://new-worled.eb2a.com/login.php",true);
+    header("location:http://new-worled.eb2a.com/out/login.php",true);
 
 
 }
@@ -164,7 +164,7 @@ else{
 if(isset($_GET['logout'])){
     session_unset();// حذف الجلسه وتدمير البيانات
     session_destroy();
-    header("location:http://new-worled.eb2a.com/login.php",true);
+    header("location:http://new-worled.eb2a.com/out/login.php",true);
 
 }
 
