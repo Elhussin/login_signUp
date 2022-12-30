@@ -153,18 +153,18 @@ if(isset($_GET['status'])){
 
 
 }else{
-    header("location:http://new-worled.eb2a.com/out/login.php",true); 
+    header("http://new-worled.eb2a.com/out/login.php",true); 
     die("");
 }
 }else{
-    header("location:http://new-worled.eb2a.com/out/login.php",true); 
+    header("http://new-worled.eb2a.com/out/login.php",true); 
     die(""); 
 }
 
 if(isset($_GET['logout'])){
     session_unset();
     session_destroy();
-    header("location:http://new-worled.eb2a.com/out/login.php",true); 
+    header("http://new-worled.eb2a.com/out/login.php",true); 
 }
 
 

@@ -103,7 +103,7 @@ if($updteUser->execute()){
 
     session_unset();// حذف الجلسه وتدمير البيانات
     session_destroy();
-    header("location:http://new-worled.eb2a.com/out/login.php",true);
+    header("http://new-worled.eb2a.com/out/login.php",true);
 }
     }
 else{

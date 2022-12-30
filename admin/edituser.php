@@ -97,11 +97,11 @@ if(isset($_POST['updat'])){
     
         echo "<form> <button class='btn btn-danger w-100' type='submit' name='logout'>تسجيل خروج</button></form>";
     }else{
-        header("location:http://new-worled.eb2a.com/out/login.php",true); 
+        header("http://new-worled.eb2a.com/out/login.php",true); 
         die("");
       }
 }else{
-        header("location:http://new-worled.eb2a.com/out/login.php",true); 
+        header("http://new-worled.eb2a.com/out/login.php",true); 
         die(""); 
 
       }
@@ -112,7 +112,7 @@ if(isset($_POST['updat'])){
 if(isset($_GET['logout'])){
     session_unset();
     session_destroy();
-    header("location:http://new-worled.eb2a.com/out/login.php",true); 
+    header("http://new-worled.eb2a.com/out/login.php",true); 
 }
 
     ?>
