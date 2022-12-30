@@ -48,18 +48,18 @@ echo
 '<a class="btn btn-outline-info  w-100  mt-3" href="profial.php">تحديث البيانات</a>
 <a class="btn btn-outline-info  w-100  mt-3" href="todo.php">TO DO</a>';       
     }else{
-        header("location:http://new-worled.eb2a.com/out/login.php",true);
+        header("location:http://new-worled.eb2a.com/login.php",true);
     
     }
 }else{
-    header("location:http://new-worled.eb2a.com/out/login.php",true);
+    header("location:http://new-worled.eb2a.com/login.php",true);
 
 }
 
 if(isset($_GET['logout'])){
     session_unset();// حذف الجلسه وتدمير البيانات
     session_destroy();
-    header("location:http://new-worled.eb2a.com/out/login.php",true);
+    header("location:http://new-worled.eb2a.com/login.php",true);
 
 }
 

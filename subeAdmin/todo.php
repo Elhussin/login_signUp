@@ -124,6 +124,7 @@ elseif($VIEW['status'] ===  "yes"){
 
 
 // ubate   status 
+
 if(isset($_GET['status'])){
     if($_GET['satuvalue'] === "no"){
         $updatSatus=$databass->prepare("UPDATE todo SET status ='yes'  WHERE ID=:id ");
@@ -153,18 +154,18 @@ if(isset($_GET['status'])){
 
 
 }else{
-    header("http://new-worled.eb2a.com/out/login.php",true); 
+    header("http://new-worled.eb2a.com/login.php",true); 
     die("");
 }
 }else{
-    header("http://new-worled.eb2a.com/out/login.php",true); 
+    header("http://new-worled.eb2a.com/login.php",true); 
     die(""); 
 }
 
 if(isset($_GET['logout'])){
     session_unset();
     session_destroy();
-    header("http://new-worled.eb2a.com/out/login.php",true); 
+    header("http://new-worled.eb2a.com/login.php",true); 
 }
 
 
@@ -173,7 +174,7 @@ if(isset($_GET['logout'])){
 if(isset($_GET['logout'])){
     session_unset();// حذف الجلسه وتدمير البيانات
     session_destroy();
-    header("location:http://new-worled.eb2a.com/out/login.php",true);
+    header("location:http://new-worled.eb2a.com/login.php",true);
 
  }
 
